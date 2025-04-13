@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Server Login</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="login.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IceMC Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="login">
-    <h1>Minecraft Server Dashboard Login</h1>
     <div class="login-container">
-      <input type="text" id="ip" placeholder="Enter Server IP (e.g., ws://yourserver:port)">
-      <input type="password" id="key" placeholder="Enter Access Key">
-      <button id="login-btn">Login</button>
+        <h1>Welcome to IceMC</h1>
+        <form action="dashboard.html">
+            <label for="websocket-url">WebSocket URL:</label>
+            <input type="text" id="websocket-url" name="websocket-url" placeholder="wss://example.com:21000" required>
+            <button type="submit">Connect</button>
+        </form>
     </div>
-  </div>
 </body>
 </html>
