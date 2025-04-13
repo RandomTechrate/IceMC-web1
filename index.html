@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Server Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="login">
+    <h1>Minecraft Server Dashboard</h1>
+    <div class="login-container">
+      <input type="password" id="key" placeholder="Enter Access Key">
+      <button id="login-btn">Login</button>
+    </div>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <div class="header">
+      <h2>Minecraft Dashboard</h2>
+      <button id="logout-btn">Logout</button>
+    </div>
+    <div class="status-container">
+      <span>Server Status:</span>
+      <div id="status-indicator" class="status-circle offline"></div>
+    </div>
+    <textarea id="console-output" readonly placeholder="Server Logs..."></textarea>
+    <div class="command-container">
+      <input type="text" id="command-input" placeholder="Enter Command">
+      <button id="send-command-btn">Send Command</button>
+    </div>
+  </div>
+</body>
+</html>
