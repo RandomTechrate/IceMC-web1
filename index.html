@@ -3,37 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Dashboard</title>
+  <title>Minecraft Server Login</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <script defer src="login.js"></script>
 </head>
 <body>
   <div id="login">
-    <h1>Minecraft Server Dashboard</h1>
+    <h1>Minecraft Server Dashboard Login</h1>
     <div class="login-container">
       <input type="text" id="ip" placeholder="Enter Server IP (e.g., ws://yourserver:port)">
       <input type="password" id="key" placeholder="Enter Access Key">
       <button id="login-btn">Login</button>
-    </div>
-  </div>
-
-  <div id="dashboard" class="hidden">
-    <div class="header">
-      <h2>Minecraft Dashboard</h2>
-      <button id="logout-btn">Logout</button>
-    </div>
-    <div class="status-container">
-      <span>Server Status:</span>
-      <div id="status-indicator" class="status-circle offline"></div>
-    </div>
-    <div class="live-feed">
-      <h3>Live Feed</h3>
-      <textarea id="console-output" readonly placeholder="Player actions, chat, and commands will appear here..."></textarea>
-    </div>
-    <div class="command-container">
-      <h3>Send Command</h3>
-      <input type="text" id="command-input" placeholder="Enter Command">
-      <button id="send-command-btn">Send</button>
     </div>
   </div>
 </body>
