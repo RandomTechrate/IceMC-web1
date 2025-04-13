@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="dashboard.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IceMC Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="dashboard">
-    <div class="header">
-      <h2>Minecraft Server Dashboard</h2>
-      <button id="logout-btn">Logout</button>
+    <div class="login-container">
+        <h1>Welcome to IceMC</h1>
+        <form action="dashboard.html">
+            <label for="websocket-url">WebSocket URL:</label>
+            <input type="text" id="websocket-url" name="websocket-url" placeholder="wss://example.com:21000" required>
+            <button type="submit">Connect</button>
+        </form>
     </div>
-    <div class="status-container">
-      <span>Server Status:</span>
-      <div id="status-indicator" class="status-circle offline"></div>
-    </div>
-    <div class="live-feed">
-      <h3>Live Feed</h3>
-      <textarea id="console-output" readonly placeholder="Player actions, chat, and commands will appear here..."></textarea>
-    </div>
-    <div class="command-container">
-      <h3>Send Command</h3>
-      <input type="text" id="command-input" placeholder="Enter Command">
-      <button id="send-command-btn">Send</button>
-    </div>
-  </div>
 </body>
 </html>
