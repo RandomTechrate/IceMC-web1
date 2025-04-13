@@ -1,4 +1,4 @@
-const serverIP = "ws://83.168.106.235:21000"; // Update with your WebSocket server IP
+const serverIP = "ws://83.168.106.235:21000"; // Your WebSocket server IP
 let socket;
 
 // DOM Elements
@@ -37,12 +37,7 @@ function connectWebSocket() {
   };
 
   socket.onmessage = (event) => {
-    if (event.data.startsWith("status:")) {
-      const status = event.data.split(":")[1];
-      updateStatus(status);
-    } else {
-      logConsole("Server: " + event.data);
-    }
+    logConsole(event.data); // Display live feed data
   };
 
   socket.onclose = () => {
@@ -68,7 +63,8 @@ function sendCommand() {
 }
 
 function logConsole(message) {
-  consoleOutput.value += message + "\n";
+  const timestamp = new Date().toLocaleTimeString();
+  consoleOutput.value += `[${timestamp}] ${message}\n`;
   consoleOutput.scrollTop = consoleOutput.scrollHeight;
 }
 
